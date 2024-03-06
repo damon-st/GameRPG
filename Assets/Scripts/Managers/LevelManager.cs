@@ -2,17 +2,38 @@
 
 internal class LevelManager : MonoBehaviour
 {
+    [Header("Panel")]
+    [SerializeField] private GameObject panelPause;
+
     [SerializeField] private Character character;
     [SerializeField] private Transform pointReaparence;
 
-    private void Update()
+
+
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        panelPause.SetActive(true);
+    }
+
+    public void ResumeGame()
     {
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            character.transform.localPosition = pointReaparence.position;
-            character.RestarCharacter();
-        }
+        Time.timeScale = 1f;
+        panelPause.SetActive(false);
+    }
+
+    public void QUitApplication()
+    {
+        Application.Quit();
+    }
+    
+
+    public void RestarPlayer()
+    {
+        character.transform.localPosition = pointReaparence.position;
+        character.RestarCharacter();
     }
 
 }

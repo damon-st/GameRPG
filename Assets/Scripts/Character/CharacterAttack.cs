@@ -76,6 +76,8 @@ public class CharacterAttack : MonoBehaviour
 
             newProyectil.SetActive(true);
             _characterMana.UseMana(WeapoinEquip.ManaRequired);
+
+            AudioManager.Instance.PlayAudioShooting();
         }
         else
         {
@@ -83,6 +85,7 @@ public class CharacterAttack : MonoBehaviour
             float damage = GetDamage();
             enemyLife.ReceiverDamage(damage);
             EventEnemyDamage?.Invoke(damage,enemyLife);
+            AudioManager.Instance.PlayAudioMeleePush();
         }
      
     }

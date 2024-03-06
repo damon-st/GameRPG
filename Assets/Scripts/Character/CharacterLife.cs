@@ -27,12 +27,12 @@ public class CharacterLife : LifeBase
     {
         if (Input.GetKeyDown(KeyCode.T)) {
 
-            ReceiverDamage(10);
+            // ReceiverDamage(10);
         }
         if (Input.GetKeyDown(KeyCode.Y))
         {
 
-            ResetHealth(10);
+          //  ResetHealth(10);
         }
     }
 
@@ -55,7 +55,7 @@ public class CharacterLife : LifeBase
         _boxColider2D.enabled = false;
         Defeated = true;
         EventCharacterDead?.Invoke();
-
+        AudioManager.Instance.PlayAudioCharacterDead();
     }
 
     public void RestartCharacter()

@@ -101,6 +101,7 @@ public class IAController : MonoBehaviour
     public void AttackEmbestida(float amount)
     {
         StartCoroutine(IEEmbestida(amount));
+        AudioManager.Instance.PlayAudioEnemyEmbestida();
     }
 
 

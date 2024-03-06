@@ -214,6 +214,7 @@ public class Inventario : Singleton<Inventario>
             }
         }
         SaveGame.Save(INVENTARIO_KEY, dataSave);
+        Debug.Log("SAVE_INVENTARIO");
     }
     private void LoadInventario() 
     {
@@ -236,6 +237,8 @@ public class Inventario : Singleton<Inventario>
                 itemsInventario[i] = null;
             }
         }
+        Debug.Log("LOAD_INVENTARIO");
+
     }
 
     #endregion
