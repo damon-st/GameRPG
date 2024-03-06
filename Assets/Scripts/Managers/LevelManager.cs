@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-internal class LevelManager : MonoBehaviour
+internal class LevelManager : Singleton<LevelManager>
 {
     [Header("Panel")]
     [SerializeField] private GameObject panelPause;
@@ -32,6 +32,8 @@ internal class LevelManager : MonoBehaviour
 
     public void RestarPlayer()
     {
+        Time.timeScale = 1f;
+        panelPause.SetActive(false);
         character.transform.localPosition = pointReaparence.position;
         character.RestarCharacter();
     }

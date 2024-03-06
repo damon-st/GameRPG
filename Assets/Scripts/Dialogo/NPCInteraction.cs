@@ -24,6 +24,7 @@ public class NPCInteraction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             DialogoManager.Instance.NPCAvalible = null;
+            DialogoManager.Instance.OpenClosePanelDialog(false);
             npcButtonInteractue.SetActive(false);
         }
     }

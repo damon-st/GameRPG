@@ -56,6 +56,7 @@ public class CharacterLife : LifeBase
         Defeated = true;
         EventCharacterDead?.Invoke();
         AudioManager.Instance.PlayAudioCharacterDead();
+        LevelManager.Instance.PauseGame();
     }
 
     public void RestartCharacter()

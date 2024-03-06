@@ -25,30 +25,37 @@ public class DialogoManager : Singleton<DialogoManager>
     private void Update()
     {
         if (npcNameTMP == null) return;
-        if (Input.GetKeyDown(KeyCode.E) && NPCAvalible!=null)
+        if (Input.GetKeyDown(KeyCode.E) && NPCAvalible!=null && !panelDialogo.activeSelf)
         {
             ConfigPanel(NPCAvalible.Dialogo);
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (despedidaShowing)
-            {
-                OpenClosePanelDialog(false);
-                despedidaShowing = false;
-                return;
-            }
+            OnContinueDialog();
+        }
+    }
 
-            if ( NPCAvalible.Dialogo.ConteintInteractionExtra)
-            {
-                UIManager.Instance.OpenPanelInteraction(NPCAvalible.Dialogo.InterationExtra);
-                OpenClosePanelDialog(false);
-                return;
-            }
+    public void OnContinueDialog()
+    {
+        if (npcNameTMP == null) return;
 
-            if (dialogoAnimate)
-            {
-                ContineDialogo();
-            }
+        if (despedidaShowing)
+        {
+            OpenClosePanelDialog(false);
+            despedidaShowing = false;
+            return;
+        }
+
+        if (NPCAvalible.Dialogo.ConteintInteractionExtra)
+        {
+            UIManager.Instance.OpenPanelInteraction(NPCAvalible.Dialogo.InterationExtra);
+            OpenClosePanelDialog(false);
+            return;
+        }
+
+        if (dialogoAnimate)
+        {
+            ContineDialogo();
         }
     }
 
@@ -61,9 +68,6 @@ public class DialogoManager : Singleton<DialogoManager>
     {
         OpenClosePanelDialog(true);
         CargarDialogosSecuence(npcDialogo);
-
-
-
         npcIcon.sprite = npcDialogo.Icon;
         npcNameTMP.text = $"{npcDialogo.Name}:";
 

@@ -13,7 +13,8 @@ public class WelcomeManager : MonoBehaviour
 
     public void PlayGame()
     {
-     menuPlay.SetActive(false);
+        Time.timeScale = 1f;
+        menuPlay.SetActive(false);
         menuLoading.SetActive(true);
         StartCoroutine(LoadLevelAsync(levelLoad));
     }
