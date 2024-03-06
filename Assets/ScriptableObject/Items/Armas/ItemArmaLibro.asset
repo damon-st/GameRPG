@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558eda72a741abc4e8a66cc6f2fe9e0c, type: 3}
+  m_Name: ItemArmaLibro
+  m_EditorClassIdentifier: 
+  ID: ArmaLibro
+  Name: Libro de Echizos
+  Icon: {fileID: 21300000, guid: 51a0bf672b5c1da46a093d184c33d973, type: 3}
+  Description: Libro de Echizos que permite lanzar poderes magicos hacia los enemigos
+  TypeItem: 0
+  IsConsumible: 0
+  IsAccumulation: 0
+  AccumulationMax: 1
+  Amount: 0
+  Weapon: {fileID: 11400000, guid: 1722245610af4024fa1eded531d9d290, type: 2}

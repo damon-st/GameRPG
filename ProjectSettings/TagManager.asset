@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Tilemap_Piso
+    uniqueID: 3525093201
+    locked: 0
+  - name: Tilemapo_Limite
+    uniqueID: 3410458917
+    locked: 0
+  - name: Tilemap_Arboles
+    uniqueID: 1780912635
+    locked: 0
+  - name: Tilemap_Casa
+    uniqueID: 2767340115
+    locked: 0
+  - name: Tlemap_Props
+    uniqueID: 1819014809
+    locked: 0
+  - name: Items
+    uniqueID: 3529402993
+    locked: 0
+  - name: Character
+    uniqueID: 833431913
+    locked: 0
+  - name: Proyectil
+    uniqueID: 2949461343
+    locked: 0
+  - name: UI
+    uniqueID: 351356881
+    locked: 0

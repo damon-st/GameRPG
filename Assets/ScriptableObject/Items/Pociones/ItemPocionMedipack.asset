@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642760db6672c0d47b47c4cb166d2d40, type: 3}
+  m_Name: ItemPocionMedipack
+  m_EditorClassIdentifier: 
+  ID: PocionMedipack
+  Name: Medi Pack
+  Icon: {fileID: 21300000, guid: 3663fa776fbd88f448bb54306b9e1699, type: 3}
+  Description: Pocion de vida que restaura 25pts de salud
+  TypeItem: 1
+  IsConsumible: 1
+  IsAccumulation: 1
+  AccumulationMax: 50
+  Amount: 0
+  HPRestauration: 25
